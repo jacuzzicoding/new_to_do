@@ -17,7 +17,7 @@ def remove_task(index):
          removed_task = task_list.pop(index)
          print("Removed task:", removed_task['task'])
     else:
-        print("Invalid index!")
+        print("No tasks to remove!")
 # mark task as completed
 
 #main loop starts here

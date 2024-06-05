@@ -19,6 +19,18 @@ def remove_task(index):
     else:
         print("No tasks to remove!")
 # mark task as completed
+def mark_task_completed(index):
+    #check if the index is valid
+    if 0 <= index < len(task_list):
+        task_list[index]['status'] = 'completed'
+        print("Task marked as completed:", task_list[index]['task'])
+    else:
+        print("No tasks to mark as completed!")
+# view tasks
+def view_tasks():
+    for index, task in enumerate(task_list):
+        print(index, task['task'], task['date'], task['status'])
+    
 
 #main loop starts here
 print("Welcome to the To-Do List App!")
@@ -31,3 +43,13 @@ if option == 1:
         task = input("Enter the task: ")
         date = input("Enter the date (XX/XX/XXXX): ")
         add_task(task, date)
+elif option == 2:
+        index = int(input("Enter the index of the task to remove: "))
+        remove_task(index) 
+elif option == 3:
+        index = int(input("Enter the index of the task to mark as completed: "))
+        mark_task_completed(index)
+elif option == 4:
+        view_tasks()
+elif option == 5:
+        print("Exiting the To-Do List App. Have a great day!")

@@ -29,9 +29,10 @@ def mark_task_completed(index):
         print("No tasks to mark as completed!")
 # view tasks (option 4)
 def view_tasks():
-    for index, task in enumerate(task_list):
+     print("Here are your current tasks:")
+     for index, task in enumerate(task_list):
         print(index, task['task'], task['date'], task['status'])
-    if len(task_list) == 0:
+     if len(task_list) == 0:
         print("No tasks to display!")
 
 #main loop starts here

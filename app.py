@@ -1,3 +1,6 @@
+#Name: Brock Jenkinson
+# Date: 06/05/2024
+# Instructor: Snehasis Mukhopadhyay
 #The program will manage a to-do list with features:
 # to add, remove, and mark tasks as completed, as well as view tasks.
 #-------------------------

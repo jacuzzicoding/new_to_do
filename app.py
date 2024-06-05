@@ -2,9 +2,14 @@
 # to add, remove, and mark tasks as completed, as well as view tasks.
 #-------------------------
 
+#here is a global list I will use to store the tasks
+tasks_list = []
+
 #defining the variables and functions
-def tasks(task, date):
-    return task, date
+
+def add_task(task, date):
+    tasks_list.append({'task': task, 'date': date, 'status': 'incomplete'})
+    print("The task,", task, ",added successfully!")
 
 
 #welcoming message to user
@@ -14,7 +19,7 @@ print("1. Add a task\n2. Remove a task\n3. Mark a task as completed\n4. View tas
 
 #user input
 option = int(input("Enter your option: "))
-    if option == 1:
+if option == 1:
         task = input("Enter the task: ")
         date = input("Enter the date: ")
-        tasks(task, date)
+        add_task(task, date)
